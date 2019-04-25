@@ -4,8 +4,43 @@
 	<title>Лабораторная работа №1: Кнопочный калькулятор</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<script type="text/javascript">
-		  var number = document.querySelectorAll('.numbers div');
-		  var butfunc = document.querySelectorAll('.functions div');
+		 /* 
+		  var textarea = document.getElementById('input');
+		  	  number = document.querySelectorAll('.numbers div');
+		  	  butfunc = document.querySelectorAll('.functions div');
+		  	  result = document.getElementById('result');
+		  	  clear = document.getElementById('clear');
+		  	  resultDisplay = false;
+		  
+		  for (var i = 0; i < number.length; i++) 
+		  {
+		  	number[i].addEventListener('click',
+		  function (e) {
+		  	var currentString = input.innerHTML;
+		  	var lastChar = currentString[currentString.length-1];
+		  	if (resultDisplay===false) {
+		  		input.innerHTML += e.target.innerHTML;}
+		  		else if (resultDisplay===true && lastChar ==="+" || lastChar === "-" || lastChar === "×" || lastChar === "÷") {
+		  			resultDisplay=false;
+		  			input.innerHTML += e.target.innerHTML;}
+		  			else {resultDisplay=false;
+		  				input.innerHTML = "";
+		  				input.innerHTML += e.target.innerHTML;
+		  			}
+
+		  });
+		  }
+		  */
+		  
+		  var textareal = document.getElementById('input');
+		  var number = document.document.querySelectorAll('but');
+		  for (var i=0; i < 0; i++) {
+		   number[i].addEventListener('click', function(e) {
+		   	var soderzh=e.target.innerHTML;
+		   });
+		   alert(soderzh);
+		  }; 
+
 		  
 		
 	</script>
@@ -32,9 +67,9 @@
 			<div class="but">3</div>
 			<div class="but">.</div>
 			<div class="but">0</div>
-			<div class="but">C</div>
+			<div class="but" id="clear">C</div>
 		</div>
-		<div class="butravno">=</div>
+		<div class="butravno" id='result'>=</div>
 		
 	</div>
 
