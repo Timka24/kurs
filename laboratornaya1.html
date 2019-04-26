@@ -4,73 +4,43 @@
 	<title>Лабораторная работа №1: Кнопочный калькулятор</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<script type="text/javascript">
-		 /* 
-		  var textarea = document.getElementById('input');
-		  	  number = document.querySelectorAll('.numbers div');
-		  	  butfunc = document.querySelectorAll('.functions div');
-		  	  result = document.getElementById('result');
-		  	  clear = document.getElementById('clear');
-		  	  resultDisplay = false;
-		  
-		  for (var i = 0; i < number.length; i++) 
-		  {
-		  	number[i].addEventListener('click',
-		  function (e) {
-		  	var currentString = input.innerHTML;
-		  	var lastChar = currentString[currentString.length-1];
-		  	if (resultDisplay===false) {
-		  		input.innerHTML += e.target.innerHTML;}
-		  		else if (resultDisplay===true && lastChar ==="+" || lastChar === "-" || lastChar === "×" || lastChar === "÷") {
-		  			resultDisplay=false;
-		  			input.innerHTML += e.target.innerHTML;}
-		  			else {resultDisplay=false;
-		  				input.innerHTML = "";
-		  				input.innerHTML += e.target.innerHTML;
-		  			}
-
-		  });
-		  }
-		  */
-		  
-		  var textareal = document.getElementById('input');
-		  var number = document.document.querySelectorAll('but');
-		  for (var i=0; i < 0; i++) {
-		   number[i].addEventListener('click', function(e) {
-		   	var soderzh=e.target.innerHTML;
-		   });
-		   alert(soderzh);
-		  }; 
-
-		  
+		function locateBut(obj) {
+			var id=obj.id;
+			var input=document.getElementById("in1");
+			input.value+=document.getElementById(id).value;
+		}
+		function inputCls(){
+			document.getElementById("in1").value="";
+		}
 		
 	</script>
 
 </head>
 <body>
 	<div class="bckgr">
-		<div class="input" id="input">0</div>
-		<div align="center" class="functions">
-			<div class="butfunc">+</div>
-			<div class="butfunc">-</div>
-			<div class="butfunc">&times;</div>
-			<div class="butfunc">&divide;</div>
+		<input type="text" class="input" id="in1" value="0">
+		<div class="funcKeys" align="center">
+			<input type="button" class="butfunc" id="funcPlus" value="+" onclick="">
+			<input type="button" class="butfunc" id="funcMinus" value="-" onclick="">
+			<input type="button" class="butfunc" id="funcMul" value="&times;" onclick="">
+			<input type="button" class="butfunc" id="funcDiv" value="&divide;" onclick="">
 		</div>
+
 		<div class="numbers">
-			<div class="but">7</div>
-			<div class="but">8</div>
-			<div class="but">9</div>
-			<div class="but">4</div>
-			<div class="but">5</div>
-			<div class="but">6</div>
-			<div class="but">1</div>
-			<div class="but">2</div>
-			<div class="but">3</div>
-			<div class="but">.</div>
-			<div class="but">0</div>
-			<div class="but" id="clear">C</div>
+			<input type="button" class="but" id="num7" value="7" onclick="locateBut(this)">
+			<input type="button" class="but" id="num8" value="8" onclick="locateBut(this)">
+			<input type="button" class="but" id="num9" value="9" onclick="locateBut(this)">
+			<input type="button" class="but" id="num4" value="4" onclick="locateBut(this)">
+			<input type="button" class="but" id="num5" value="5" onclick="locateBut(this)">
+			<input type="button" class="but" id="num6" value="6" onclick="locateBut(this)">
+			<input type="button" class="but" id="num1" value="1" onclick="locateBut(this)">
+			<input type="button" class="but" id="num2" value="2" onclick="locateBut(this)">
+			<input type="button" class="but" id="num3" value="3" onclick="locateBut(this)">
+			<input type="button" class="but" id="num0" value="0" onclick="locateBut(this)">
+			<input type="button" class="but" id="numDot" value="." onclick="locateBut(this)">
+			<input type="button" class="but" id="numClear" value="C" onclick="inputCls()">
 		</div>
-		<div class="butravno" id='result'>=</div>
-		
+		<input type="button" class="butravno" id="result" value="=" onclick="">
 	</div>
 
 </body>
