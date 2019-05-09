@@ -1,0 +1,16 @@
+{
+	"manifest_version": 2, //версия манифеста
+	"name": "Training calculator", //название расширения
+	"description": "Учебный калькулятор от Timka24",
+	"version": "1.0.0", //версия расширения
+	"icons": {"128": "icon_128.png"},
+	"content_security_policy":"script-src 'self' https://apis.google.com; object-src 'self'",
+	"browser_action": {
+		"default_title": "Calculator", //заголовок в браузере
+		"default_icon": "icon_128.png", //путь к картинке расширения
+		"default_popup": "popup.html" //путь к странице с попапом
+	},
+	"permissions": [
+		"storage"
+	]
+}
